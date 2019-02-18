@@ -1,6 +1,6 @@
 package algo_project1;/*
- * Name: <your name>
- * EID: <your EID>
+ * Name: Meyer Dauber
+ * EID: mjd3375
  */
 
 import java.util.ArrayList;
@@ -25,7 +25,13 @@ public class Program1 extends AbstractProgram1 {
      * project documentation to help you with this.
      */
     public boolean isStableMatching(Matching allocation) {
-        /* TODO implement this function */
+        /*for(int loc = 0; loc < allocation.getServerSlots().size(); loc++){
+
+        }
+
+        */
+        System.out.println(allocation.toString());
+
         return false; /* TODO remove this line */
     }
 
@@ -37,7 +43,19 @@ public class Program1 extends AbstractProgram1 {
      * @return A stable Matching.
      */
     public Matching stableMarriageGaleShapley(Matching allocation) {
-        /* TODO implement this function */
+        /*
+        While there is a man m who is free and hasn’t proposed to every woman
+        Choose such a man m
+        Let w be the highest-ranked woman in m’s preference list
+        to whom m has not yet proposed If ~ is free then
+        (m, ~) become engaged
+        Else ~ is currently engaged to m’
+        If ~ prefers m’ to m then m remains free
+        Else w prefers m to m’ (m,~) become engaged nlI becomes free
+        Endif Endif
+        Endwhile
+        Return the set S of engaged pairs
+        */
         return null; /* TODO remove this line */
     }
 }
