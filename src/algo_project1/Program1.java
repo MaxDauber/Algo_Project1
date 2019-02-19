@@ -25,14 +25,36 @@ public class Program1 extends AbstractProgram1 {
      * project documentation to help you with this.
      */
     public boolean isStableMatching(Matching allocation) {
-        /*for(int loc = 0; loc < allocation.getServerSlots().size(); loc++){
 
+        //loop through users in the matching to find one that is assigned
+        for(int user = 0; user < allocation.getUserMatching().size(); user++){
+            if(allocation.getUserMatching().get(user) != -1){
+
+                //if found assigned user, loop through users to check if it is assigned or not and then compare pref vals
+                for(int user_compare = 0; user_compare < allocation.getUserMatching().size(); user_compare++) {
+                    if (allocation.getUserMatching().get(user_compare) == -1 && user != user_compare) {
+
+                            //if the user to compare is unassigned, check if the unassigned server has a higher pref value
+                            //than the currently assigned one based on the preference list of the current server
+                            if (allocation.getServerPreference().get(allocation.getUserMatching().get(user)).indexOf(user) >
+                                    allocation.getServerPreference().get(allocation.getUserMatching().get(user)).indexOf(user_compare)) {
+                                return false;
+                            }
+                    }
+                    //NEED TO ADD IF??????????
+                    else if( user != user_compare){
+                        //if the user to compare is assigned, loop through the servers to see if there is a user who prefers
+                        for (int server = 0; server < allocation.getServerCount(); server++) {
+                            if (allocation.getUserPreference().get(user).indexOf(server) >
+                                    allocation.getUserPreference().get(user_compare).indexOf(server)) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
         }
-
-        */
-        System.out.println(allocation.toString());
-
-        return false; /* TODO remove this line */
+        return true;
     }
 
     /**
