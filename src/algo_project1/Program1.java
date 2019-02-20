@@ -78,7 +78,7 @@ public class Program1 extends AbstractProgram1 {
      * @return A stable Matching.
      */
     public Matching stableMarriageGaleShapley(Matching allocation) {
-        final long start = System.nanoTime();
+        //final long start = System.nanoTime();
         int unassigned = -1;
         ArrayList<Integer> assigned_slots = new ArrayList<Integer>();
         ArrayList<Integer> temp_matches = new ArrayList<Integer>();
@@ -125,8 +125,8 @@ public class Program1 extends AbstractProgram1 {
         }
 
         allocation.setUserMatching(temp_matches);
-        final long end = System.nanoTime();
-        System.out.println(end-start + "\n");
+        //final long end = System.nanoTime();
+        //System.out.println(end-start + "\n");
         return allocation;
         /*
 

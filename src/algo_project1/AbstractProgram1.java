@@ -10,6 +10,7 @@ public abstract class AbstractProgram1 {
      * @return A stable Matching.
      */
     public Matching stableMarriageBruteForce(Matching allocation) {
+
         int n = allocation.getUserCount();
         int slots = allocation.totalServerSlots();
 
@@ -20,7 +21,6 @@ public abstract class AbstractProgram1 {
                 return matching;
             }
         }
-
         return new Matching(allocation);
     }
 

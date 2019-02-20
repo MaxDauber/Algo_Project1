@@ -190,6 +190,7 @@ public class Driver {
             System.out.printf("%s: stable? %s\n", "Gale-Shapley Server Optimal", isStable);
             System.out.println();
         }
+        //final long start = System.nanoTime();
 
         if (testBruteForce) {
             Matching BFMatching = program.stableMarriageBruteForce(problem);
@@ -198,5 +199,7 @@ public class Driver {
             System.out.printf("%s: stable? %s\n", "Brute Force", isStable);
             System.out.println();
         }
+        //final long end = System.nanoTime();
+        //System.out.println(end-start + "\n");
     }
 }
